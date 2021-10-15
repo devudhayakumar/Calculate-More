@@ -15,7 +15,7 @@ public class percentageCalculator extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_percentage_calculator);
-        final EditText value1 = (EditText) findViewById(R.id.value1);
+        final EditText value1 = (EditText) findViewById(R.id.price);
         final EditText  value2 = (EditText) findViewById(R.id.value2);
         final EditText  value3 = (EditText) findViewById(R.id.value3);
         final TextView result1 = (TextView) findViewById(R.id.result1);

@@ -10,6 +10,7 @@
     <ScrollView
         android:layout_width="409dp"
         android:layout_height="738dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,6 +20,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:orientation="horizontal">
 
             <com.google.android.material.card.MaterialCardView
@@ -74,14 +76,14 @@
                             android:layout_height="match_parent">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/value1"
+                                android:id="@+id/price"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:cursorVisible="true"
                                 android:hint="    %"
                                 android:inputType="numberDecimal"
-                                android:textDirection="rtl"
+                                android:textDirection="ltr"
                                 app:textInputLayoutFocusedRectEnabled="false" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -103,11 +105,11 @@
                                 android:id="@+id/value2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:cursorVisible="true"
-                                android:hint="    value1"
+                                android:hint="  Total"
                                 android:inputType="numberDecimal"
-                                android:textDirection="rtl"
+                                android:textDirection="ltr"
                                 app:textInputLayoutFocusedRectEnabled="false" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -128,11 +130,11 @@
                                 android:id="@+id/value3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:cursorVisible="true"
-                                android:hint="    value3"
+                                android:hint="  Result"
                                 android:inputType="numberDecimal"
-                                android:textDirection="rtl"
+                                android:textDirection="ltr"
                                 app:textInputLayoutFocusedRectEnabled="false" />
                         </com.google.android.material.textfield.TextInputLayout>
 

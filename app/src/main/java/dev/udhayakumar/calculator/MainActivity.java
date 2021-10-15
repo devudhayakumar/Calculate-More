@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         CardView cardper = (CardView) findViewById(R.id.cardpercentage);
         CardView cardage = (CardView) findViewById(R.id.cardage);
         CardView cardcgpa = (CardView) findViewById(R.id.cardcgpa);
+        CardView cardgst = (CardView) findViewById(R.id.cardgst);
         cardper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent( MainActivity.this, AgeCalculator.class);
+                startActivity(i);
+            }
+        });
+        cardgst.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent( MainActivity.this,GstCalculator.class);
                 startActivity(i);
             }
         });
