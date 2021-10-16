@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class percentageCalculator extends AppCompatActivity {
 
@@ -19,6 +20,8 @@ public class percentageCalculator extends AppCompatActivity {
         final EditText  value2 = (EditText) findViewById(R.id.value2);
         final EditText  value3 = (EditText) findViewById(R.id.value3);
         final TextView result1 = (TextView) findViewById(R.id.result1);
+        Button type1 = (Button) findViewById(R.id.type1button) ;
+        Button type2 = (Button) findViewById(R.id.type2button) ;
         Button submit1 = (Button) findViewById(R.id.submit1);
         submit1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +60,18 @@ public class percentageCalculator extends AppCompatActivity {
                     }
                 }
 
+            }
+        });
+        type1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Sorry something went wrong", Toast.LENGTH_LONG).show();
+            }
+        });
+        type2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Sorry something went wrong", Toast.LENGTH_LONG).show();
             }
         });
 

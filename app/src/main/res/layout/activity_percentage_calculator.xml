@@ -8,20 +8,17 @@
 
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="738dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card"
@@ -30,6 +27,7 @@
                 android:layout_gravity="top"
                 android:layout_margin="8dp"
                 android:isScrollContainer="false"
+                app:cardCornerRadius="6dp"
                 android:keyboardNavigationCluster="false">
 
                 <LinearLayout
@@ -65,14 +63,14 @@
 
                     <!-- Buttons -->
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
-                        android:orientation="horizontal">
+                        android:orientation="vertical">
 
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                            android:layout_width="115dp"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -81,7 +79,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="5dp"
                                 android:cursorVisible="true"
-                                android:hint="    %"
+                                android:hint="    %   "
                                 android:inputType="numberDecimal"
                                 android:textDirection="ltr"
                                 app:textInputLayoutFocusedRectEnabled="false" />
@@ -92,13 +90,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:marqueeRepeatLimit="marquee_forever"
-                            android:text="OF"
+                            android:text="of"
                             android:textAlignment="center"
                             android:textSize="14sp" />
 
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                            android:layout_width="115dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -123,7 +121,7 @@
 
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                            android:layout_width="115dp"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -153,6 +151,9 @@
 
                     <Button
                         android:id="@+id/submit1"
+                        android:background="@drawable/buttonstyle"
+                        android:theme="@style/Button"
+                        android:hapticFeedbackEnabled="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
@@ -161,7 +162,217 @@
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginTop="30dp"
+                android:text="some of common formats:"
+                android:textSize="16sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/type1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="Type 1(Beta)" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <TextView
+                            android:id="@+id/textView1411"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="4"
+                            android:text="What is  " />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="46"
+                            android:weightSum="35">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/type1value1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:cursorVisible="true"
+                                android:hint="    %"
+                                android:inputType="numberDecimal"
+                                android:textDirection="ltr"
+                                app:textInputLayoutFocusedRectEnabled="false" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/textView1511"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="4"
+                            android:text="of" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="46">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/type1value2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:cursorVisible="true"
+                                android:hint="    value 1"
+                                android:inputType="numberDecimal"
+                                android:textDirection="ltr"
+                                app:textInputLayoutFocusedRectEnabled="false" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/type1result"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="Result"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/type1button"
+                        android:background="@drawable/buttonstyle"
+                        android:theme="@style/Button"
+                        android:hapticFeedbackEnabled="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="Calculate" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/type2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="Type 2(Beta)" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="115dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/type2valu1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:cursorVisible="true"
+                                android:hint="    value1"
+                                android:inputType="numberDecimal"
+                                android:textDirection="ltr"
+                                app:textInputLayoutFocusedRectEnabled="false" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/textView141"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:text="What is  % of" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/type2value2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:cursorVisible="true"
+                                android:hint="    value 2"
+                                android:inputType="numberDecimal"
+                                android:textDirection="ltr"
+                                app:textInputLayoutFocusedRectEnabled="false" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/type2result"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="Result"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/type2button"
+                        android:background="@drawable/buttonstyle"
+                        android:theme="@style/Button"
+                        android:hapticFeedbackEnabled="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="Calculate" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
+
+
     </ScrollView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
