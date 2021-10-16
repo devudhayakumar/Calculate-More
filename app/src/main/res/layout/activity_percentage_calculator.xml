@@ -27,6 +27,7 @@
                 android:layout_gravity="top"
                 android:layout_margin="8dp"
                 android:isScrollContainer="false"
+                app:cardCornerRadius="6dp"
                 android:keyboardNavigationCluster="false">
 
                 <LinearLayout
@@ -62,14 +63,14 @@
 
                     <!-- Buttons -->
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
-                        android:orientation="horizontal">
+                        android:orientation="vertical">
 
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                            android:layout_width="110dp"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -78,7 +79,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="5dp"
                                 android:cursorVisible="true"
-                                android:hint="    %"
+                                android:hint="    %   "
                                 android:inputType="numberDecimal"
                                 android:textDirection="ltr"
                                 app:textInputLayoutFocusedRectEnabled="false" />
@@ -95,7 +96,7 @@
 
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                            android:layout_width="115dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -120,7 +121,7 @@
 
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                            android:layout_width="110dp"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -150,6 +151,9 @@
 
                     <Button
                         android:id="@+id/submit1"
+                        android:background="@drawable/buttonstyle"
+                        android:theme="@style/Button"
+                        android:hapticFeedbackEnabled="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
@@ -171,7 +175,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp">
+                android:layout_margin="8dp"
+                app:cardCornerRadius="6dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -188,21 +193,25 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:weightSum="100">
 
                         <TextView
                             android:id="@+id/textView1411"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="15dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="4"
                             android:text="What is  " />
 
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                            android:layout_width="115dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="0dp"
-                            android:layout_marginTop="15dp">
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="46"
+                            android:weightSum="35">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/type1value1"
@@ -221,16 +230,18 @@
                             android:id="@+id/textView1511"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="15dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="4"
                             android:text="of" />
 
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginStart="0dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginEnd="15dp">
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="46">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/type1value2"
@@ -256,6 +267,9 @@
 
                     <Button
                         android:id="@+id/type1button"
+                        android:background="@drawable/buttonstyle"
+                        android:theme="@style/Button"
+                        android:hapticFeedbackEnabled="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
@@ -266,7 +280,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp">
+                android:layout_margin="8dp"
+                app:cardCornerRadius="6dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -344,6 +359,9 @@
 
                     <Button
                         android:id="@+id/type2button"
+                        android:background="@drawable/buttonstyle"
+                        android:theme="@style/Button"
+                        android:hapticFeedbackEnabled="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
