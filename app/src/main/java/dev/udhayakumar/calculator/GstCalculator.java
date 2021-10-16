@@ -17,6 +17,8 @@ public class GstCalculator extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gst_calculator);
+        assert getSupportActionBar() != null;   //null check
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final EditText price = (EditText) findViewById(R.id.price);
         RadioGroup taxper = (RadioGroup) findViewById(R.id.taxper);
         Button calculate = (Button) findViewById(R.id.submit);
@@ -40,7 +42,7 @@ public class GstCalculator extends AppCompatActivity {
                 if(value.length()==0){
                     total.setText("Enter any price");
                 }else if (tax[0].length()==0){
-                    total.setText("select any tax percentage");
+                    total.setText("Select any tax percentage");
                 }else {
                     Integer.parseInt(tax[0]);
                     String taxpercentage =  tax[0];
