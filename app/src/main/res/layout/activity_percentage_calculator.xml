@@ -187,6 +187,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
+                        android:clickable="false"
                         android:text="Format 1"
                         android:textSize="14sp"
                         app:chipBackgroundColor="#C6C8C6" />
@@ -294,6 +295,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
+                        android:clickable="false"
                         android:text="Format 2"
                         android:textSize="14sp"
                         app:chipBackgroundColor="#C6C8C6" />

@@ -52,8 +52,8 @@
                             android:layout_width="65dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center"
-                            android:layout_margin="20dp"
-                            android:layout_weight="30"
+                            android:layout_margin="15dp"
+                            android:layout_weight="70"
                             android:scaleType="fitCenter"
                             android:textAlignment="gravity"
                             app:srcCompat="@drawable/moneybag" />
@@ -62,8 +62,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_margin="15dp"
-                            android:layout_weight="70"
+                            android:layout_margin="10dp"
+                            android:layout_weight="30"
                             android:orientation="vertical">
 
                             <TextView
@@ -103,16 +103,15 @@
                             android:layout_width="65dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center"
-                            android:layout_margin="20dp"
-                            android:layout_marginTop="20dp"
+                            android:layout_margin="15dp"
                             android:layout_weight="40"
-                            app:srcCompat="@drawable/percentage" />
+                            app:srcCompat="@drawable/discount" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_margin="15dp"
+                            android:layout_margin="10dp"
                             android:layout_weight="60"
                             android:gravity="center"
                             android:orientation="vertical">
@@ -161,17 +160,17 @@
                             android:layout_width="60dp"
                             android:layout_height="65dp"
                             android:layout_gravity="center"
-                            android:layout_margin="20dp"
+                            android:layout_margin="15dp"
                             android:layout_weight="40"
                             android:scaleType="fitCenter"
                             android:textAlignment="gravity"
-                            app:srcCompat="@drawable/googledocs" />
+                            app:srcCompat="@drawable/contract" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_margin="15dp"
+                            android:layout_margin="10dp"
                             android:layout_weight="60"
                             android:orientation="vertical">
 
@@ -205,6 +204,7 @@
                         android:layout_width="50dp"
                         android:layout_height="30dp"
                         android:layout_margin="2dp"
+                        android:clickable="false"
                         android:text="SOON.."
                         android:textSize="8sp"
                         app:chipBackgroundColor="#B9F44336" />
@@ -220,7 +220,7 @@
                             android:layout_width="60dp"
                             android:layout_height="65dp"
                             android:layout_gravity="center"
-                            android:layout_margin="20dp"
+                            android:layout_margin="15dp"
                             android:layout_marginTop="20dp"
                             android:layout_weight="40"
                             app:srcCompat="@drawable/bmi" />
@@ -229,7 +229,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_margin="15dp"
+                            android:layout_margin="10dp"
                             android:layout_weight="60"
                             android:gravity="center"
                             android:orientation="vertical">
@@ -271,6 +271,7 @@
                         android:layout_width="50dp"
                         android:layout_height="30dp"
                         android:layout_margin="2dp"
+                        android:clickable="false"
                         android:text="SOON.."
                         android:textSize="8sp"
                         app:chipBackgroundColor="#B9F44336" />
@@ -286,7 +287,7 @@
                             android:layout_width="60dp"
                             android:layout_height="65dp"
                             android:layout_gravity="center"
-                            android:layout_margin="20dp"
+                            android:layout_margin="15dp"
                             android:layout_weight="40"
                             android:scaleType="fitCenter"
                             android:textAlignment="gravity"
@@ -296,7 +297,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_margin="15dp"
+                            android:layout_margin="10dp"
                             android:layout_weight="60"
                             android:orientation="vertical">
 
@@ -330,6 +331,7 @@
                         android:layout_width="50dp"
                         android:layout_height="30dp"
                         android:layout_margin="2dp"
+                        android:clickable="false"
                         android:text="SOON.."
                         android:textSize="8sp"
                         app:chipBackgroundColor="#B9F44336" />
@@ -345,16 +347,16 @@
                             android:layout_width="60dp"
                             android:layout_height="65dp"
                             android:layout_gravity="center"
-                            android:layout_margin="20dp"
+                            android:layout_margin="15dp"
                             android:layout_marginTop="20dp"
                             android:layout_weight="40"
-                            app:srcCompat="@drawable/promotion" />
+                            app:srcCompat="@drawable/pricetag" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_margin="15dp"
+                            android:layout_margin="10dp"
                             android:layout_weight="60"
                             android:gravity="center"
                             android:orientation="vertical">
@@ -397,7 +399,7 @@
                         android:layout_height="50dp"
                         android:layout_margin="20dp"
                         android:layout_weight="20"
-                        app:srcCompat="@drawable/graduation" />
+                        app:srcCompat="@drawable/mortarboard" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -454,7 +456,7 @@
                         android:layout_height="50dp"
                         android:layout_margin="20dp"
                         android:layout_weight="20"
-                        app:srcCompat="@drawable/e18" />
+                        app:srcCompat="@drawable/growing" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
