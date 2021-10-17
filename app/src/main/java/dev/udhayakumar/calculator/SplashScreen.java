@@ -15,14 +15,13 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+
         int secondsDelayed = 1;
         new Handler().postDelayed(new Runnable() {
             public void run() {
                 startActivity(new Intent(SplashScreen.this, MainActivity.class));
                 finish();
             }
-        }, secondsDelayed * 3000);
+        }, secondsDelayed * 3500);
     }
 }
