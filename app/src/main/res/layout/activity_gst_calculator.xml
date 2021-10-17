@@ -27,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:text="GST Calculator"
+                android:text="Enter price and tax %"
                 android:textColor="#1C1B1B"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -35,9 +35,10 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                style="@style/Widget.AppTheme.TextInputLayoutList"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/price"
@@ -47,8 +48,9 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="5dp"
                     android:cursorVisible="true"
-                    android:hint="    Enter price"
+                    android:hint="      Enter price"
                     android:inputType="numberDecimal"
+                    android:textColorHint="#404142"
                     app:textInputLayoutFocusedRectEnabled="false" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -137,7 +139,8 @@
                 android:id="@+id/csgst"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp" />
+                android:layout_margin="16dp"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/total"
@@ -145,7 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:textColor="#4CAF50"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
 
         </LinearLayout>
     </ScrollView>

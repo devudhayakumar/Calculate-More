@@ -1,14 +1,13 @@
 package dev.udhayakumar.calculator;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class percentageCalculator extends AppCompatActivity {
 
@@ -16,62 +15,81 @@ public class percentageCalculator extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_percentage_calculator);
+        assert getSupportActionBar() != null;   //null check
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final EditText value1 = (EditText) findViewById(R.id.price);
         final EditText  value2 = (EditText) findViewById(R.id.value2);
         final EditText  value3 = (EditText) findViewById(R.id.value3);
         final TextView result1 = (TextView) findViewById(R.id.result1);
+        final TextView type1result = (TextView) findViewById(R.id.type1result);
+        final TextView type2result = (TextView) findViewById(R.id.type2result);
         Button type1 = (Button) findViewById(R.id.type1button) ;
         Button type2 = (Button) findViewById(R.id.type2button) ;
         Button submit1 = (Button) findViewById(R.id.submit1);
-        submit1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String val1 = value1.getText().toString();
-                String val2 = value2.getText().toString();
-                String val3 = value3.getText().toString();
+        submit1.setOnClickListener(view -> {
+            String val1 = value1.getText().toString();
+            String val2 = value2.getText().toString();
+            String val3 = value3.getText().toString();
 
-                if (val1.length()==0 && val2.length()==0 && val3.length()==0){
-                    result1.setText("Need to enter atleast two value⚠");
-                }else if((val1.length()==0 && val2.length()==0) || (val2.length()==0 && val3.length()==0) || (val1.length()==0 && val3.length()==0)){
-                    result1.setText("Need to enter atleast two value⚠");
+            if (val1.length()==0 && val2.length()==0 && val3.length()==0){
+                result1.setText("Need to enter atleast two value");
+            }else if((val1.length()==0 && val2.length()==0) || (val2.length()==0 && val3.length()==0) || (val1.length()==0 && val3.length()==0)){
+                result1.setText("Need to enter atleast two value");
 
-                }else if (val1.length()>0 && val2.length()>0 && val3.length()>0){
-                    result1.setText("Enter only two value⚠");
+            }else if (val1.length()>0 && val2.length()>0 && val3.length()>0){
+                result1.setText("Enter only two value");
 
-                }else {
-                    //int intval1=Integer.parseInt(val1);
-                    if(val1.length()==0){
-                        double dubval2=Double.parseDouble(val2);
-                        double dubval3=Double.parseDouble(val3);
-                        double cal = dubval3/dubval2 *100;
-                        Log.i("result" ,String.valueOf(cal));
-                        result1.setText("Result:"+cal);
-                    }else if(val2.length()==0){
-                        double dubval1=Double.parseDouble(val1);
-                        double dubval3=Double.parseDouble(val3);
-                        double cal = dubval3/dubval1 *100;
-                        result1.setText("Result:"+cal);
-                    }else if(val3.length()==0){
-                        double dubval1=Double.parseDouble(val1);
-                        double dubval2=Double.parseDouble(val2);
-                        double cal = (dubval1/100)*dubval2;
-                        result1.setText("Result:"+cal);
+            }else {
+                //int intval1=Integer.parseInt(val1);
+                if(val1.length()==0){
+                    double dubval2=Double.parseDouble(val2);
+                    double dubval3=Double.parseDouble(val3);
+                    double cal = dubval3/dubval2 *100;
+                    Log.i("result" ,String.valueOf(cal));
+                    result1.setText("Answer : "+String.format("%.2f" , cal) +"%");
+                }else if(val2.length()==0){
+                    double dubval1=Double.parseDouble(val1);
+                    double dubval3=Double.parseDouble(val3);
+                    double cal = dubval3/dubval1 *100;
+                    result1.setText("Answer : "+String.format("%.2f" , cal));
+                }else if(val3.length()==0){
+                    double dubval1=Double.parseDouble(val1);
+                    double dubval2=Double.parseDouble(val2);
+                    double cal = (dubval1/100)*dubval2;
+                    result1.setText("Answer : "+String.format("%.2f" , cal));
 
-                    }
                 }
-
             }
+
         });
         type1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Sorry something went wrong", Toast.LENGTH_LONG).show();
+                final EditText type1value1 = (EditText) findViewById(R.id.type1value1);
+                final EditText type1value2 = (EditText) findViewById(R.id.type1value2);
+                if(type1value1.length()==0 || type1value2.length()==0){
+                    type1result.setText("Enter two inputs");
+                }else{
+                    double val1 = Double.parseDouble(type1value1.getText().toString());
+                    double val2 = Double.parseDouble(type1value2.getText().toString());
+                    double result = (val1/100)*val2;
+                    type1result.setText("Answer :  " + String.format("%.2f" , result) );
+                }
             }
         });
         type2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Sorry something went wrong", Toast.LENGTH_LONG).show();
+                final EditText type2value1 = (EditText) findViewById(R.id.type2value1);
+                final EditText type2value2 = (EditText) findViewById(R.id.type2value2);
+                if(type2value1.length()==0 || type2value2.length()==0){
+                    type2result.setText("Enter two inputs");
+                }else{
+                    double val1 = Double.parseDouble(type2value1.getText().toString());
+                    double val2 = Double.parseDouble(type2value2.getText().toString());
+                    double result = (val1/val2)*100;
+                    type2result.setText("Answer :  " + String.format("%.2f" , result)+"%" );
+                }
             }
         });
 

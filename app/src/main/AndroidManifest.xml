@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="dev.udhayakumar.calculator">
 
-    <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -15,25 +14,52 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".GstCalculator"
-            android:exported="false"/>
-        <activity
-            android:name=".percentageCalculator"
-            android:exported="false"/>
-        <activity
-            android:name=".CgpaCalculator"
-            android:exported="false" />
-        <activity
-            android:name=".AgeCalculator"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
+            android:name=".SplashScreen"
+            android:exported="true"
+            android:theme="@style/AppTheme.Fullscreen"><intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".DiscountCalculator"
+            android:exported="false" />
+        <activity
+            android:name=".DateCalculator"
+            android:exported="false" />
+        <activity
+            android:name=".BmiCalculator"
+            android:exported="false" />
+        <activity
+            android:name=".WordsCalculator"
+            android:exported="true"
+            android:label="Words and letters Calculator"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".GstCalculator"
+            android:exported="false"
+            android:label="GST Calculator"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".percentageCalculator"
+            android:exported="false"
+            android:label="Percentage Calculator"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".CgpaCalculator"
+            android:exported="false"
+            android:label="CGPA Calculator"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AgeCalculator"
+            android:exported="false"
+            android:label="Age Calculator"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
         </activity>
     </application>
 

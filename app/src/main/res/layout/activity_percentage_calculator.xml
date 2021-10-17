@@ -46,8 +46,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Percentage calculator"
+                            android:text="Main Format"
                             android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="#373636"
                             android:textSize="24sp" />
 
                         <TextView
@@ -69,7 +70,7 @@
                         android:orientation="vertical">
 
                         <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            style="@style/Widget.AppTheme.TextInputLayoutList"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
@@ -95,7 +96,7 @@
                             android:textSize="14sp" />
 
                         <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            style="@style/Widget.AppTheme.TextInputLayoutList"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
@@ -120,7 +121,7 @@
                             android:textSize="20sp" />
 
                         <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            style="@style/Widget.AppTheme.TextInputLayoutList"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
@@ -142,10 +143,9 @@
                         android:id="@+id/result1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:text="Result :"
-                        android:textColor="#4E9851"
+                        android:layout_margin="15dp"
+                        android:text="Answer :"
+                        android:textColor="#494A49"
                         android:textColorHint="#858282"
                         android:textSize="24sp" />
 
@@ -169,7 +169,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:layout_marginTop="30dp"
-                android:text="some of common formats:"
+                android:text="Some of common formats :"
                 android:textSize="16sp" />
 
             <androidx.cardview.widget.CardView
@@ -183,12 +183,14 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/type1"
-                        android:layout_width="match_parent"
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="15dp"
-                        android:text="Type 1(Beta)" />
+                        android:layout_margin="8dp"
+                        android:clickable="false"
+                        android:text="Format 1"
+                        android:textSize="14sp"
+                        app:chipBackgroundColor="#C6C8C6" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -200,12 +202,13 @@
                             android:id="@+id/textView1411"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="10dp"
                             android:layout_weight="4"
                             android:text="What is  " />
 
                         <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            style="@style/Widget.AppTheme.TextInputLayoutList"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="0dp"
@@ -235,7 +238,7 @@
                             android:text="of" />
 
                         <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            style="@style/Widget.AppTheme.TextInputLayoutList"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginStart="0dp"
@@ -249,7 +252,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="5dp"
                                 android:cursorVisible="true"
-                                android:hint="    value 1"
+                                android:hint="    Total"
                                 android:inputType="numberDecimal"
                                 android:textDirection="ltr"
                                 app:textInputLayoutFocusedRectEnabled="false" />
@@ -262,7 +265,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
-                        android:text="Result"
+                        android:text="Answer : "
                         android:textSize="24sp" />
 
                     <Button
@@ -288,32 +291,36 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/type2"
-                        android:layout_width="match_parent"
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="15dp"
-                        android:text="Type 2(Beta)" />
+                        android:layout_margin="8dp"
+                        android:clickable="false"
+                        android:text="Format 2"
+                        android:textSize="14sp"
+                        app:chipBackgroundColor="#C6C8C6" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:weightSum="100">
 
                         <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                            android:layout_width="115dp"
+                            style="@style/Widget.AppTheme.TextInputLayoutList"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
-                            android:layout_marginTop="15dp">
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="48">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/type2valu1"
+                                android:id="@+id/type2value1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="5dp"
                                 android:cursorVisible="true"
-                                android:hint="    value1"
+                                android:hint="    Result"
                                 android:inputType="numberDecimal"
                                 android:textDirection="ltr"
                                 app:textInputLayoutFocusedRectEnabled="false" />
@@ -325,15 +332,18 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="15dp"
-                            android:text="What is  % of" />
+                            android:layout_weight="4"
+                            android:text="is What % of" />
 
                         <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                            android:layout_width="match_parent"
+                            style="@style/Widget.AppTheme.TextInputLayoutList"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginStart="0dp"
                             android:layout_marginTop="15dp"
-                            android:layout_marginEnd="15dp">
+                            android:layout_marginEnd="15dp"
+                            android:layout_weight="48"
+                            android:weightSum="50">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/type2value2"
@@ -341,7 +351,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="5dp"
                                 android:cursorVisible="true"
-                                android:hint="    value 2"
+                                android:hint="    Total"
                                 android:inputType="numberDecimal"
                                 android:textDirection="ltr"
                                 app:textInputLayoutFocusedRectEnabled="false" />
@@ -354,7 +364,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
-                        android:text="Result"
+                        android:text="Answer : "
                         android:textSize="24sp" />
 
                     <Button
