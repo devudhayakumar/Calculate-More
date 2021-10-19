@@ -55,7 +55,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Enter any two value"
+                            android:text="You hava three field here give any two input and press calculate button to get the balance ones answer.  "
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary"
                             android:textSize="16sp" />
@@ -169,7 +169,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:layout_marginTop="30dp"
-                android:text="Some of common formats :"
+                android:text="Some of common formats (with two inputs):"
                 android:textSize="16sp" />
 
             <androidx.cardview.widget.CardView
@@ -233,7 +233,7 @@
                             android:id="@+id/textView1511"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
                             android:layout_weight="4"
                             android:text="of" />
 
@@ -331,7 +331,7 @@
                             android:id="@+id/textView141"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="15dp"
+                            android:layout_marginTop="10dp"
                             android:layout_weight="4"
                             android:text="is What % of" />
 

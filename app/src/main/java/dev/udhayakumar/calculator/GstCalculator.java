@@ -2,7 +2,9 @@ package dev.udhayakumar.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -11,12 +13,15 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class GstCalculator extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gst_calculator);
+        Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         assert getSupportActionBar() != null;   //null check
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final EditText price = (EditText) findViewById(R.id.price);
@@ -38,11 +43,12 @@ public class GstCalculator extends AppCompatActivity {
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibe.vibrate(50);
                 String value = price.getText().toString();
                 if(value.length()==0){
-                    total.setText("Enter any price");
+                    Snackbar.make(view, "Enter any price ", Snackbar.LENGTH_SHORT).show();
                 }else if (tax[0].length()==0){
-                    total.setText("Select any tax percentage");
+                    Snackbar.make(view, "Select any tax percentage", Snackbar.LENGTH_SHORT).show();
                 }else {
                     Integer.parseInt(tax[0]);
                     String taxpercentage =  tax[0];

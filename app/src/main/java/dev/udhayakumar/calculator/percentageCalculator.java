@@ -1,6 +1,8 @@
 package dev.udhayakumar.calculator;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -9,12 +11,15 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class percentageCalculator extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_percentage_calculator);
+        Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         assert getSupportActionBar() != null;   //null check
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final EditText value1 = (EditText) findViewById(R.id.price);
@@ -27,17 +32,19 @@ public class percentageCalculator extends AppCompatActivity {
         Button type2 = (Button) findViewById(R.id.type2button) ;
         Button submit1 = (Button) findViewById(R.id.submit1);
         submit1.setOnClickListener(view -> {
+            vibe.vibrate(50);
             String val1 = value1.getText().toString();
             String val2 = value2.getText().toString();
             String val3 = value3.getText().toString();
 
             if (val1.length()==0 && val2.length()==0 && val3.length()==0){
-                result1.setText("Need to enter atleast two value");
+                Snackbar.make(view, "Need to enter atleast two value ", Snackbar.LENGTH_SHORT).show();
+
             }else if((val1.length()==0 && val2.length()==0) || (val2.length()==0 && val3.length()==0) || (val1.length()==0 && val3.length()==0)){
-                result1.setText("Need to enter atleast two value");
+                Snackbar.make(view, "Need to enter atleast two value ", Snackbar.LENGTH_SHORT).show();
 
             }else if (val1.length()>0 && val2.length()>0 && val3.length()>0){
-                result1.setText("Enter only two value");
+                Snackbar.make(view, "Enter only two value ", Snackbar.LENGTH_SHORT).show();
 
             }else {
                 //int intval1=Integer.parseInt(val1);
@@ -65,10 +72,11 @@ public class percentageCalculator extends AppCompatActivity {
         type1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibe.vibrate(50);
                 final EditText type1value1 = (EditText) findViewById(R.id.type1value1);
                 final EditText type1value2 = (EditText) findViewById(R.id.type1value2);
                 if(type1value1.length()==0 || type1value2.length()==0){
-                    type1result.setText("Enter two inputs");
+                    Snackbar.make(view, "Enter Both inputs ", Snackbar.LENGTH_SHORT).show();
                 }else{
                     double val1 = Double.parseDouble(type1value1.getText().toString());
                     double val2 = Double.parseDouble(type1value2.getText().toString());
@@ -80,10 +88,11 @@ public class percentageCalculator extends AppCompatActivity {
         type2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibe.vibrate(50);
                 final EditText type2value1 = (EditText) findViewById(R.id.type2value1);
                 final EditText type2value2 = (EditText) findViewById(R.id.type2value2);
                 if(type2value1.length()==0 || type2value2.length()==0){
-                    type2result.setText("Enter two inputs");
+                    Snackbar.make(view, "Enter Both inputs ", Snackbar.LENGTH_SHORT).show();
                 }else{
                     double val1 = Double.parseDouble(type2value1.getText().toString());
                     double val2 = Double.parseDouble(type2value2.getText().toString());

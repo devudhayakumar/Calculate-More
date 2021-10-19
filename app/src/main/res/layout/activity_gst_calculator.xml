@@ -27,9 +27,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:text="Enter price and tax %"
-                android:textColor="#1C1B1B"
-                android:textSize="20sp"
+                android:text="Enter price and tax % to get SGST , CGST and Total price."
+                android:textColor="#3C3B3B"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

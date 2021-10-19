@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:text="Check number of words and letters"
+                android:text="You can enter how much text you want and you can get the total no of words and letters in it."
                 android:textSize="16sp" />
 
             <com.google.android.material.textfield.TextInputLayout
