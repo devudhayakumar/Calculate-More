@@ -221,7 +221,6 @@
                             android:layout_height="65dp"
                             android:layout_gravity="center"
                             android:layout_margin="15dp"
-                            android:layout_marginTop="20dp"
                             android:layout_weight="40"
                             app:srcCompat="@drawable/bmi" />
 
@@ -348,7 +347,6 @@
                             android:layout_height="65dp"
                             android:layout_gravity="center"
                             android:layout_margin="15dp"
-                            android:layout_marginTop="20dp"
                             android:layout_weight="40"
                             app:srcCompat="@drawable/pricetag" />
 
