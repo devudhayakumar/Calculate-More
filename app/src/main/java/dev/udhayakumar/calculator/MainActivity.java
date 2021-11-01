@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
         carddiscount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Will be Available Soon.. ", Snackbar.LENGTH_SHORT).show();
+                Intent i = new Intent( MainActivity.this, DiscountCalculator.class);
+                startActivity(i);
             }
         });
         cardbmi.setOnClickListener(new View.OnClickListener() {

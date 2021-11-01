@@ -38,8 +38,8 @@ public class WordsCalculator extends AppCompatActivity {
                 }else{
                     StringTokenizer words = new StringTokenizer(str);
                     String letters = str.replaceAll("\\s","");
-                    result.setText(" Total no of words = "+String.valueOf(words.countTokens()));
-                    result2.setText(" Total no of letters = "+String.valueOf(letters.length()));
+                    result.setText(String.valueOf(words.countTokens()));
+                    result2.setText(String.valueOf(letters.length()));
                 }
             }
         });

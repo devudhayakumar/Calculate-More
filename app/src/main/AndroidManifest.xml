@@ -16,21 +16,25 @@
         <activity
             android:name=".SplashScreen"
             android:exported="true"
-            android:theme="@style/AppTheme.Fullscreen"><intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:theme="@style/AppTheme.Fullscreen">
         </activity>
         <activity
             android:name=".DiscountCalculator"
-            android:exported="false" />
+            android:exported="true"
+            android:label="Discount Calculator"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
         <activity
             android:name=".DateCalculator"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Date Calculator"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".BmiCalculator"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Bmi Calculator"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".WordsCalculator"
             android:exported="true"
@@ -59,7 +63,11 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
