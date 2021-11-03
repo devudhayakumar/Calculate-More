@@ -221,7 +221,6 @@
                             android:layout_height="65dp"
                             android:layout_gravity="center"
                             android:layout_margin="15dp"
-                            android:layout_marginTop="20dp"
                             android:layout_weight="40"
                             app:srcCompat="@drawable/bmi" />
 
@@ -274,6 +273,7 @@
                         android:clickable="false"
                         android:text="SOON.."
                         android:textSize="8sp"
+
                         app:chipBackgroundColor="#B9F44336" />
 
                     <LinearLayout
@@ -289,6 +289,7 @@
                             android:layout_gravity="center"
                             android:layout_margin="15dp"
                             android:layout_weight="40"
+                            android:contextClickable="false"
                             android:scaleType="fitCenter"
                             android:textAlignment="gravity"
                             app:srcCompat="@drawable/calendar" />
@@ -322,19 +323,9 @@
                     android:layout_margin="16dp"
                     android:layout_weight="50"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="6dp"
-                    app:cardElevation="5dp"
-                    app:rippleColor="?attr/colorPrimary">
+                    app:cardElevation="5dp">
 
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="50dp"
-                        android:layout_height="30dp"
-                        android:layout_margin="2dp"
-                        android:clickable="false"
-                        android:text="SOON.."
-                        android:textSize="8sp"
-                        app:chipBackgroundColor="#B9F44336" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -348,7 +339,6 @@
                             android:layout_height="65dp"
                             android:layout_gravity="center"
                             android:layout_margin="15dp"
-                            android:layout_marginTop="20dp"
                             android:layout_weight="40"
                             app:srcCompat="@drawable/pricetag" />
 

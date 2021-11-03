@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -19,6 +21,28 @@ public class MainActivity extends AppCompatActivity {
         CardView cardcgpa = (CardView) findViewById(R.id.cardcgpa);
         CardView cardgst = (CardView) findViewById(R.id.cardgst);
         CardView cardwords = (CardView) findViewById(R.id.cardwords);
+        CardView carddate = (CardView) findViewById(R.id.carddate);
+        CardView cardbmi = (CardView) findViewById(R.id.cardbmi);
+        CardView carddiscount = (CardView) findViewById(R.id.carddiscount);
+        carddiscount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent( MainActivity.this, DiscountCalculator.class);
+                startActivity(i);
+            }
+        });
+        cardbmi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Will be Available Soon.. ", Snackbar.LENGTH_SHORT).show();
+            }
+        });
+        carddate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Will be Available Soon.. ", Snackbar.LENGTH_SHORT).show();
+            }
+        });
         cardper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -27,9 +27,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:text="Enter price and tax %"
-                android:textColor="#1C1B1B"
-                android:textSize="20sp"
+                android:text="Enter price and tax % to get SGST , CGST and Total price."
+                android:textColor="#3C3B3B"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -52,7 +52,6 @@
                     android:inputType="numberDecimal"
                     android:textColorHint="#404142"
                     app:textInputLayoutFocusedRectEnabled="false" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -117,15 +116,32 @@
 
             </RadioGroup>
 
-            <Button
-                android:id="@+id/submit"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:background="@drawable/buttonstyle"
-                android:hapticFeedbackEnabled="true"
-                android:text="calculate"
-                android:theme="@style/Button" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <Button
+                    android:id="@+id/submit2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/buttonoutline"
+                    android:hapticFeedbackEnabled="true"
+                    android:text="Clear" />
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/buttonstyle"
+                    android:hapticFeedbackEnabled="true"
+                    android:text="calculate" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView8"
