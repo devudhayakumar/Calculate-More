@@ -12,12 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
+        android:name=".clacApplication"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".SplashScreen"
-            android:exported="true"
-            android:theme="@style/AppTheme.Fullscreen">
-        </activity>
         <activity
             android:name=".DiscountCalculator"
             android:exported="true"

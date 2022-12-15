@@ -15,74 +15,69 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:text="Enter  two dates and to get no of days in between ." />
-
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_margin="16dp"
+                style="?attr/materialCardViewFilledStyle">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.AppTheme.TextInputLayoutList"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/percentage"
+                    <TextView
+                        android:id="@+id/textView17"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="5dp"
-                        android:cursorVisible="true"
-                        android:hint="      Enter Date 1"
-                        android:inputType="numberDecimal"
-                        android:textColorHint="#404142"
-                        app:textInputLayoutFocusedRectEnabled="false" />
+                        android:layout_margin="15dp"
+                        android:text="Enter  two dates and to get no of days in between ." />
 
-                </com.google.android.material.textfield.TextInputLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.AppTheme.TextInputLayoutList"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/date1"
+                            android:ems="10"
+                            android:hint="DD/MM/YYYY"
+                            android:inputType="date"
+                            android:focusable="false"
+                            />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/percentage"
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/date2"
+                            android:ems="10"
+                            android:hint="DD/MM/YYYY"
+                            android:inputType="date"
+                            android:focusable="false"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView18"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="5dp"
-                        android:cursorVisible="true"
-                        android:hint="      Enter Date 2"
-                        android:inputType="numberDecimal"
-                        android:textColorHint="#404142"
-                        app:textInputLayoutFocusedRectEnabled="false" />
+                        android:layout_margin="16dp"
+                        android:text="Answer :" />
 
-                </com.google.android.material.textfield.TextInputLayout>
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="calculate" />
 
-            </LinearLayout>
+                </LinearLayout>
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:background="@drawable/buttonstyle"
-                android:text="calculate" />
+            </com.google.android.material.card.MaterialCardView>
 
-            <TextView
-                android:id="@+id/textView18"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:text="Answer :" />
+
 
         </LinearLayout>
     </ScrollView>

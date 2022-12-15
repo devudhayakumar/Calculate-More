@@ -20,8 +20,6 @@ public class percentageCalculator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_percentage_calculator);
         Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        assert getSupportActionBar() != null;   //null check
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final EditText value1 = (EditText) findViewById(R.id.price);
         final EditText  value2 = (EditText) findViewById(R.id.value2);
         final EditText  value3 = (EditText) findViewById(R.id.value3);

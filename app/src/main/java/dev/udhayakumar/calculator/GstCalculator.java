@@ -22,8 +22,6 @@ public class GstCalculator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gst_calculator);
         Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        assert getSupportActionBar() != null;   //null check
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final EditText price = (EditText) findViewById(R.id.price);
         RadioGroup taxper = (RadioGroup) findViewById(R.id.taxper);
         Button calculate = (Button) findViewById(R.id.submit);

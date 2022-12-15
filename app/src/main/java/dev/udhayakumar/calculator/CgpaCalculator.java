@@ -17,6 +17,6 @@ public class CgpaCalculator extends AppCompatActivity {
         WebView myWebView = (WebView) findViewById(R.id.web);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        myWebView.loadUrl("https://dev-udhayakumar.github.io/CGPA_Calculator/index.html");
+        myWebView.loadUrl("https://devudhayakumar.github.io/CGPA_Calculator/index.html");
     }
 }

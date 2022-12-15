@@ -19,8 +19,6 @@ public class DiscountCalculator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discount_calculator);
         Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        assert getSupportActionBar() != null;   //null check
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final EditText percentage = (EditText) findViewById(R.id.percentage);
         final EditText price = (EditText) findViewById(R.id.price);
         final TextView discountprice = (TextView) findViewById(R.id.result);

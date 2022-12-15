@@ -22,8 +22,6 @@ public class WordsCalculator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_words_calculator);
         Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        assert getSupportActionBar() != null;   //null check
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final EditText input  = (EditText) findViewById(R.id.words);
         final TextView result = (TextView) findViewById(R.id.result);
         final TextView result2 = (TextView) findViewById(R.id.result2);

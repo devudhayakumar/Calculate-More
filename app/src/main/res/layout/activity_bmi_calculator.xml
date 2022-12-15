@@ -14,134 +14,103 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:text="TextView" />
+            android:layout_height="match_parent"
+            style="?attr/materialCardViewFilledStyle"
+            android:layout_margin="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
 
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.AppTheme.TextInputLayoutList"
+                <TextView
+                    android:id="@+id/textView13"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="30">
+                    android:layout_margin="15dp"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:text="Calculate your BMI" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/weight"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="5dp"
-                        android:cursorVisible="true"
-                        android:hint="      Enter weight"
-                        android:inputType="numberDecimal"
-                        android:textColorHint="#404142"
-                        app:textInputLayoutFocusedRectEnabled="false" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.AppTheme.TextInputLayoutList"
+                <TextView
+                    android:id="@+id/textView14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="70">
+                    android:layout_margin="15dp"
+                    android:text="Enter the weight an height" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/spinner1"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="5dp"
-                        android:cursorVisible="true"
-                        android:hint="      cm"
-                        android:inputType="numberDecimal"
-                        android:textColorHint="#404142"
-                        app:textInputLayoutFocusedRectEnabled="false" />
+                        android:layout_weight="30">
 
-                </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/weight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:cursorVisible="true"
+                            android:hint="      Enter weight in kg"
+                            android:inputType="numberDecimal"
+                            app:textInputLayoutFocusedRectEnabled="false" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="30">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/height"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:cursorVisible="true"
+                            android:hint="      Enter height"
+                            android:inputType="numberDecimal"
+                            app:textInputLayoutFocusedRectEnabled="false" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/bmianswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:textSize="16dp"
+                    android:text="BMI : " />
+
+                <Button
+                    android:id="@+id/bmicalculatebtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="16dp"
+
+                    android:text="Button" />
+
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.AppTheme.TextInputLayoutList"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="30">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/height"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="5dp"
-                        android:cursorVisible="true"
-                        android:hint="      Enter weight"
-                        android:inputType="numberDecimal"
-                        android:textColorHint="#404142"
-                        app:textInputLayoutFocusedRectEnabled="false" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.AppTheme.TextInputLayoutList"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="70">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/spinner2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="5dp"
-                        android:cursorVisible="true"
-                        android:hint="      cm"
-                        android:inputType="numberDecimal"
-                        android:textColorHint="#404142"
-                        app:textInputLayoutFocusedRectEnabled="false" />
-                </com.google.android.material.textfield.TextInputLayout>
-            </LinearLayout>
-            <Button
-                android:id="@+id/button"
-                android:background="@drawable/buttonstyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:text="Button" />
-
-            <TextView
-                android:id="@+id/textView19"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:text="TextView" />
-        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

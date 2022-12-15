@@ -25,9 +25,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:layout_margin="8dp"
+                android:layout_margin="16dp"
                 android:isScrollContainer="false"
-                app:cardCornerRadius="6dp"
+                style="?attr/materialCardViewFilledStyle"
                 android:keyboardNavigationCluster="false">
 
                 <LinearLayout
@@ -48,7 +48,6 @@
                             android:layout_height="wrap_content"
                             android:text="Main Format"
                             android:textAppearance="?attr/textAppearanceHeadline6"
-                            android:textColor="#373636"
                             android:textSize="24sp" />
 
                         <TextView
@@ -70,7 +69,6 @@
                         android:orientation="vertical">
 
                         <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.AppTheme.TextInputLayoutList"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
@@ -96,7 +94,6 @@
                             android:textSize="14sp" />
 
                         <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.AppTheme.TextInputLayoutList"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
@@ -121,7 +118,6 @@
                             android:textSize="20sp" />
 
                         <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.AppTheme.TextInputLayoutList"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
@@ -145,14 +141,10 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
                         android:text="Answer :"
-                        android:textColor="#494A49"
-                        android:textColorHint="#858282"
                         android:textSize="24sp" />
 
                     <Button
                         android:id="@+id/submit1"
-                        android:background="@drawable/buttonstyle"
-                        android:theme="@style/Button"
                         android:hapticFeedbackEnabled="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -172,11 +164,11 @@
                 android:text="Some of common formats (with two inputs):"
                 android:textSize="16sp" />
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="6dp">
+                android:layout_margin="16dp"
+                style="?attr/materialCardViewFilledStyle">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -189,8 +181,8 @@
                         android:layout_margin="8dp"
                         android:clickable="false"
                         android:text="Format 1"
-                        android:textSize="14sp"
-                        app:chipBackgroundColor="#C6C8C6" />
+                        style="@style/Widget.Material3.Chip.Suggestion"
+                        android:textSize="14sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -208,7 +200,6 @@
                             android:text="What is  " />
 
                         <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.AppTheme.TextInputLayoutList"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="0dp"
@@ -238,7 +229,6 @@
                             android:text="of" />
 
                         <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.AppTheme.TextInputLayoutList"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginStart="0dp"
@@ -270,21 +260,19 @@
 
                     <Button
                         android:id="@+id/type1button"
-                        android:background="@drawable/buttonstyle"
-                        android:theme="@style/Button"
                         android:hapticFeedbackEnabled="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
                         android:text="Calculate" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="6dp">
+                android:layout_margin="16dp"
+                style="?attr/materialCardViewFilledStyle">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -298,7 +286,7 @@
                         android:clickable="false"
                         android:text="Format 2"
                         android:textSize="14sp"
-                        app:chipBackgroundColor="#C6C8C6" />
+                        style="@style/Widget.Material3.Chip.Suggestion" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -307,7 +295,6 @@
                         android:weightSum="100">
 
                         <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.AppTheme.TextInputLayoutList"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -336,7 +323,6 @@
                             android:text="is What % of" />
 
                         <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.AppTheme.TextInputLayoutList"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginStart="0dp"
@@ -369,15 +355,13 @@
 
                     <Button
                         android:id="@+id/type2button"
-                        android:background="@drawable/buttonstyle"
-                        android:theme="@style/Button"
                         android:hapticFeedbackEnabled="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
                         android:text="Calculate" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
 
 

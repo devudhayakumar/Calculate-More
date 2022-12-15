@@ -19,128 +19,131 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:text="You can enter how much text you want and you can get the total no of words and letters in it."
-                android:textSize="16sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.AppTheme.TextInputLayoutList"
-                    android:layout_width="match_parent"
-                    android:layout_height="350dp">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/words"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:cursorVisible="true"
-                        android:defaultFocusHighlightEnabled="true"
-                        android:focusable="auto"
-                        android:focusableInTouchMode="true"
-                        android:focusedByDefault="true"
-                        android:hint="       Paste text here"
-                        android:inputType="textMultiLine"
-                        android:selectAllOnFocus="true"
-                        android:textColorHint="#404142"
-                        app:textInputLayoutFocusedRectEnabled="true" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/submit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:background="@drawable/buttonstyle"
-                android:hapticFeedbackEnabled="true"
-                android:text="calculate"
-                android:theme="@style/Button" />
-
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="15dp">
+                android:layout_margin="16dp"
+                style="?attr/materialCardViewFilledStyle">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:text="You can enter how much text you want and you can get the total no of words and letters in it."
+                        android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/result"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="15dp"
-                            android:layout_weight="1"
-                            android:text="0"
-                            android:textAlignment="center"
-                            android:textColor="#232323"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/textView16"
+                        <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="15dp"
-                            android:layout_weight="1"
-                            android:text="Total no of words"
-                            android:textAlignment="center" />
+                            android:layout_height="350dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/words"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="16dp"
+                                android:cursorVisible="true"
+                                android:defaultFocusHighlightEnabled="true"
+                                android:focusable="auto"
+                                android:focusableInTouchMode="true"
+                                android:focusedByDefault="true"
+                                android:hint="       Paste text here"
+                                android:inputType="textMultiLine"
+                                android:selectAllOnFocus="true"
+                                android:textColorHint="#404142"
+                                app:textInputLayoutFocusedRectEnabled="true" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/result2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="15dp"
-                            android:text="0"
-                            android:textAlignment="center"
-                            android:textColor="#232323"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/textView22"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="15dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="Total no of letters "
-                            android:textAlignment="center" />
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/result"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="15dp"
+                                android:layout_weight="1"
+                                android:text="0"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:textSize="24sp" />
+
+                            <TextView
+                                android:id="@+id/textView16"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="15dp"
+                                android:layout_weight="1"
+                                android:text="Total no of words"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/result2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="15dp"
+                                android:text="0"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:textSize="24sp" />
+
+                            <TextView
+                                android:id="@+id/textView22"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="15dp"
+                                android:layout_weight="1"
+                                android:text="Total no of letters "
+                                android:textAlignment="center" />
+                        </LinearLayout>
                     </LinearLayout>
+
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:hapticFeedbackEnabled="true"
+                        android:text="calculate"/>
+
+
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
 
         </LinearLayout>
     </ScrollView>
